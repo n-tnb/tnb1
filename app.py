@@ -59,7 +59,7 @@ async def main():
     # await page.mouse.click(x, y);
 
         count = 0
-        while count < 100:
+        while count < 2:
             circle = page.locator("circle").nth(0)
             bounding_box = await circle.bounding_box()
             if bounding_box is None:
@@ -69,7 +69,7 @@ async def main():
             await page.mouse.click(x, y)
             count += 1
         
-        await page.screenshot(path="screen.png", full_page=True)
+        await page.screenshot(path="screen.png", full_page=False)
         # --- When you encounter hCaptcha in your workflow ---
         # agent: AgentV = await challenge(page)
 
