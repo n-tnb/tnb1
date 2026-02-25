@@ -68,7 +68,8 @@ async def main():
             y = bounding_box["y"] + bounding_box["height"] / 2
             await page.mouse.click(x, y)
             count += 1
-        
+
+        await page.wait_for_timeout(60000)
         await page.screenshot(path="screen.png", full_page=False)
         # --- When you encounter hCaptcha in your workflow ---
         # agent: AgentV = await challenge(page)
