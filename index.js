@@ -43,7 +43,7 @@ const run = async () => {
     const y = boundingBox.y + boundingBox.height / 2;
     await page.mouse.click(x, y);
 
-    await new Promise((r) => setTimeout(r, 500));
+    await new Promise((r) => setTimeout(r, 100));
     count++;
   }
 
@@ -75,4 +75,5 @@ const run = async () => {
 };
 
 run();
+
 
