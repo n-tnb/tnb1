@@ -49,7 +49,8 @@ const run = async () => {
     }
 
     await page.click("button[type='button'] > span");
-
+    
+    await new Promise((r) => setTimeout(r, 2000));
     await page.screenshot({ path: "screen.png" });
   } catch (e) {
     console.error("erro", e);
@@ -59,5 +60,6 @@ const run = async () => {
 };
 
 run();
+
 
 
